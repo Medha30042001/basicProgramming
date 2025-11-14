@@ -1,12 +1,18 @@
-function primeOrNot(num){
-    if(num<=1) return false;
+function isPrime(num) {
+  if (num <= 1) return false;
 
-    for(let i=2; i<=Math.sqrt(num); i++){
-        if(num%i===0) return false;
-    }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
 
-    return true;
+  return true;
 }
 
-console.log(primeOrNot(9));
-console.log(primeOrNot(7));
+module.exports = { isPrime };
+
+function evenOdd(num) {
+  return num % 2 === 0;
+}
+
+module.exports = { isPrime, evenOdd };
+
